@@ -33,6 +33,17 @@ img{max-width:100%;display:block}
 .btn-dark:hover{filter:brightness(1.05);transform:translateY(-1px);box-shadow:0 8px 18px rgba(0,0,0,.45)}
 .btn-whatsapp{background:#25d366;color:#fff}
 
+/* Mobile nav toggle */
+.menu-toggle{display:none;background:#0f0f10;color:#fff;border:none;border-radius:10px;padding:8px 12px;font-weight:800}
+@media (max-width: 840px){
+  .menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+  .topbar .nav{position:relative}
+  .topbar .menu{display:none;position:absolute;left:0;right:0;top:100%;background:#e6e7eb;border-radius:10px;padding:12px 16px;flex-direction:column;gap:10px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+  .topbar .nav.open .menu{display:flex}
+  .topbar .btn-whatsapp{display:none}
+}
+
+
 /* Hero */
 .hero{position:relative;isolation:isolate}
 .hero__media{position:relative;height:64vh;min-height:420px;max-height:720px;overflow:hidden}
@@ -300,6 +311,7 @@ img{max-width:100%;display:block}
 .form input.invalid,.form select:invalid,.form textarea.invalid{border-color:#e11d48;box-shadow:0 0 0 2px rgba(225,29,72,.15) inset}
 .form select:invalid{color:#555}
 .consent.invalid{outline:2px solid #e11d48;outline-offset:4px}
+
 /* Stack form layout like reference */
 .section-brand .form--stack{max-width:980px;margin-inline:auto;gap:14px}
 .section-brand .form--stack .form__row{grid-template-columns:1fr;gap:14px}
