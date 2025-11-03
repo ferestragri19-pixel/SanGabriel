@@ -32,7 +32,7 @@ img{max-width:100%;display:block}
 .btn-dark{background:#0f0f10;color:#fff}
 .btn-dark:hover{filter:brightness(1.05);transform:translateY(-1px);box-shadow:0 8px 18px rgba(0,0,0,.45)}
 .btn-whatsapp{background:#25d366;color:#fff;display:inline-flex;align-items:center;gap:8px}
-.btn-whatsapp::before{content:"";width:18px;height:18px;display:inline-block;background:no-repeat center/contain url('images/whatsapp.svg')}
+.btn-whatsapp::before{content:"";width:18px;height:18px;display:inline-block;background:no-repeat center/contain url('whatsapp.svg')}
 
 /* Mobile nav toggle */
 .menu-toggle{display:none;background:#0f0f10;color:#fff;border:none;border-radius:10px;padding:8px 12px;font-weight:800;line-height:0}
@@ -347,3 +347,4 @@ img{max-width:100%;display:block}
 @media (max-width: 900px){
   .workflow__grid{grid-template-columns:1fr}
 }
+
