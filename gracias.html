@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="base.css" />
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="icon" href="logo.png" type="image/png">
     <style>
       .thanks{min-height:60vh;display:grid;place-items:center;text-align:center}
       .thanks .box{background:#1f1f1f;border-radius:12px;padding:28px 24px;border:2px solid var(--brand);max-width:640px;margin:0 auto}
@@ -23,9 +23,16 @@
     <header class="topbar">
       <div class="container nav">
         <a class="brand" href="index.html#inicio" aria-label="San Gabriel">
-          <img src="images/logo.png" alt="Logo San Gabriel" />
+          <img src="logo.png" alt="Logo San Gabriel" />
         </a>
-        <nav class="menu" aria-label="Principal">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <line class="l1" x1="4" y1="6" x2="20" y2="6" />
+            <line class="l2" x1="4" y1="12" x2="20" y2="12" />
+            <line class="l3" x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+        <nav class="menu" id="nav-menu" aria-label="Principal">
           <a href="index.html#inicio">Inicio</a>
           <a href="index.html#nosotros">Nosotros</a>
           <a href="servicios.html">Servicios</a>
@@ -50,7 +57,7 @@
     <footer class="footer section-light">
       <div class="container footer__grid">
         <div class="footer__brand">
-          <img src="images/logo.png" alt="Logo San Gabriel" />
+          <img src="logo.png" alt="Logo San Gabriel" />
         </div>
         <div class="footer__links">
           <h4>Enlaces</h4>
@@ -78,6 +85,18 @@
           if(window.scrollY > 4) tb.classList.add('scrolled');
           else tb.classList.remove('scrolled');
         });
+        // Mobile menu toggle
+        (function(){
+          var nav = document.querySelector('.topbar .nav');
+          var btn = document.querySelector('.menu-toggle');
+          if(!nav || !btn) return;
+          btn.addEventListener('click', function(){
+            var open = nav.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+          nav.querySelectorAll('.menu a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }); });
+          window.addEventListener('resize', function(){ if(window.innerWidth > 840){ nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); } });
+        })();
       </script>
     </footer>
   </body>
