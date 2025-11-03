@@ -1,0 +1,220 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instalación de Paneles Solares | San Gabriel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css" />
+    <link rel="icon" href="images/logo.png" type="image/png">
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="#inicio" aria-label="San Gabriel">
+          <img src="images/logo.png" alt="Logo San Gabriel" />
+        </a>
+        <nav class="menu" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="#portafolio">Portafolio</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="btn btn-whatsapp" href="https://wa.me/5218184731555" target="_blank" rel="noopener">Whatsapp</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="hero__media" role="img" aria-label="Instalación de paneles solares">
+        <img src="images/instpaneles.png" alt="Instalación de paneles solares" />
+        <div class="overlay"></div>
+      </div>
+      <div class="container hero__content">
+        <h1>Instalación de paneles solares</h1>
+        <p class="lead">Sistemas fotovoltaicos de alta eficiencia para hogares y empresas</p>
+      </div>
+      <div class="hero__curve" aria-hidden="true"></div>
+    </section>
+
+    <!-- Introducción split (imagen izquierda, texto derecha) -->
+    <section class="section-light service">
+      <div class="container split split--reverse">
+        <figure class="split__media">
+          <img src="images/instpaneles.png" alt="Paneles solares" />
+        </figure>
+        <div class="split__text">
+          <h2>Soluciones solares integrales</h2>
+          <ul class="bullets">
+            <li>Ofrecemos <strong>soluciones solares de alta eficiencia</strong> que reducen costos de energía, cumplen normas ambientales y fortalecen la <strong>sustentabilidad</strong> del negocio.</li>
+            <li>Brindamos <strong>diseño, instalación y mantenimiento</strong> con tecnología de vanguardia y enfoque integral para asegurar rendimiento y garantía.</li>
+          </ul>
+          <a class="btn btn-primary" href="contacto.html">Solicitar cotización</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alcance del servicio -->
+    <section class="section-dark" id="nosotros">
+      <div class="container">
+        <h2>¿Qué incluye nuestro servicio?</h2>
+        <div class="features__grid">
+          <div class="feature"><span class="feature__icon" aria-hidden="true">🔎</span><p>Diagnóstico y análisis de consumo para dimensionar el sistema adecuado.</p></div>
+          <div class="feature"><span class="feature__icon" aria-hidden="true">📊</span><p>Ingeniería y simulación energética para estimar generación y retorno.</p></div>
+          <div class="feature"><span class="feature__icon" aria-hidden="true">📝</span><p>Gestión de trámites y normativas ante CFE/municipio cuando aplica.</p></div>
+          <div class="feature"><span class="feature__icon" aria-hidden="true">⚡</span><p>Instalación profesional: paneles, estructuras, inversores y protecciones.</p></div>
+          <div class="feature"><span class="feature__icon" aria-hidden="true">📡</span><p>Monitoreo en línea del desempeño y app de visualización.</p></div>
+          <div class="feature"><span class="feature__icon" aria-hidden="true">🛠️</span><p>Mantenimiento preventivo y correctivo para asegurar la vida útil del sistema.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipos de sistemas -->
+    <section class="section-light" id="portafolio">
+      <div class="container">
+        <h2>Tipos de sistemas que instalamos</h2>
+        <div class="cards__grid cards__grid--three">
+          <article class="card"><h3>Residencial</h3><p>Soluciones para casa habitación con medidor bidireccional y monitoreo.</p></article>
+          <article class="card"><h3>Comercial</h3><p>Para comercios y PyMEs buscando reducir costos operativos y huella de carbono.</p></article>
+          <article class="card"><h3>Industrial</h3><p>Proyectos en techos o suelo con ingeniería a la medida y seguridad eléctrica.</p></article>
+        </div>
+      </div>
+    </section>   
+  
+    <!-- Calculadora de ahorro -->
+    <section class="section-light">
+      <div class="container">
+        <h2>Calcula tu ahorro estimado</h2>
+        <form id="calc" class="solar-calc" onsubmit="return false;">
+          <div class="row">
+            <label>Gasto mensual de luz (MXN)
+              <input type="number" id="bill" min="0" step="50" value="1500" required>
+            </label>
+            <label>Precio por kWh (MXN)
+              <input type="number" id="rate" min="0.5" step="0.1" value="2.5" required>
+            </label>
+            <label>Compensación deseada (%)
+              <input type="number" id="offset" min="10" max="100" step="5" value="90" required>
+            </label>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" id="run-calc">Calcular</button>
+          </div>
+          <div class="result" id="result" aria-live="polite"></div>
+          <small class="note">Resultados aproximados con supuestos estándar: 1 kWp ≈ 140 kWh/mes, costo de sistema ≈ MXN 23,000/kWp. Los valores reales pueden variar según sitio, tarifa e ingeniería.</small>
+        </form>
+      </div>
+    </section>    
+    
+    <!-- FAQs -->
+    <section class="faqs section-dark">
+      <div class="container">
+        <h2>Preguntas frecuentes sobre paneles solares</h2>
+        <div class="faq-list">
+          <details class="faq">
+            <summary>¿Cuánto puedo ahorrar con un sistema fotovoltaico?</summary>
+            <p>Depende de tu consumo y tarifa. Normalmente se compensa entre el 60% y 98% del recibo, dimensionando el sistema conforme a tu historial.</p>
+          </details>
+          <details class="faq">
+            <summary>¿Qué mantenimiento requiere?</summary>
+            <p>Limpieza periódica de paneles y revisión anual eléctrica/mecánica. Ofrecemos planes de mantenimiento programado.</p>
+          </details>
+          <details class="faq">
+            <summary>¿Cuánto dura un sistema?</summary>
+            <p>Los paneles suelen ofrecer garantías de 25 años de potencia; inversores entre 5 y 12 años según modelo. La vida útil supera los 25 años con buen cuidado.</p>
+          </details>
+          <details class="faq">
+            <summary>¿Puedo monitorear la energía generada?</summary>
+            <p>Sí, integramos plataformas de monitoreo para visualizar producción y alertas desde tu computadora o celular.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-brand" id="contacto">
+      <div class="container" style="text-align:center">
+        <h2>¿Listo para cotizar tu panel solar?</h2>
+        <a class="btn btn-dark" href="index.html#contacto">Contáctanos</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section-light">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="images/logo.png" alt="Logo San Gabriel" />
+        </div>
+        <div class="footer__links">
+          <h4>Enlaces</h4>
+          <a href="#inicio">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="#portafolio">Proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contacto</h4>
+          <p>Teléfono: +52 818 473 1555</p>
+          <p>Email: materialesasangabriel@gmail.com</p>
+          <p>San Nicolás de los Garza, NL</p>
+        </div>
+      </div>
+      <div class="container copy">
+        <small>© <span id="y"></span> San Gabriel. Todos los derechos reservados.</small>
+      </div>
+      <script>
+        // Año dinámico y sombra del header
+        document.getElementById('y').textContent = new Date().getFullYear();
+        document.addEventListener('scroll', function(){
+          var tb = document.querySelector('.topbar');
+          if(!tb) return;
+          if(window.scrollY > 4) tb.classList.add('scrolled');
+          else tb.classList.remove('scrolled');
+        });
+        // Scroll reveal
+        document.addEventListener('DOMContentLoaded', function(){
+          var groups = ['.hero h1','.hero .lead','.split__text','.split__media','.features__grid .feature','.cards__grid .card','.faq'];
+          var nodes=[]; groups.forEach(function(s){ nodes = nodes.concat([].slice.call(document.querySelectorAll(s)));});
+          nodes.forEach(function(el,i){ el.classList.add('reveal'); el.style.setProperty('--delay',((i%8)*80)+'ms');});
+          var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target);} });},{threshold:0.15});
+          document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+        });
+      // Calculator logic
+(function(){
+  var bill = document.getElementById('bill');
+  var rate = document.getElementById('rate');
+  var offset = document.getElementById('offset');
+  var out = document.getElementById('result');
+  var run = document.getElementById('run-calc');
+  if(!bill || !rate || !offset || !run || !out) return;
+  function format(n){ return new Intl.NumberFormat('es-MX', {maximumFractionDigits:2}).format(n); }
+  run.addEventListener('click', function(){
+    var vBill = Math.max(0, Number(bill.value||0));
+    var vRate = Math.max(0.1, Number(rate.value||0));
+    var vOff = Math.min(100, Math.max(0, Number(offset.value||0)))/100;
+    var kWhMes = vBill / vRate; // consumo estimado
+    var kWp = (kWhMes * vOff) / 140; // 1 kWp ≈ 140 kWh/mes (aprox)
+    var panelW = 0.55; // 550 Wp
+    var nPanels = Math.max(1, Math.ceil(kWp / panelW));
+    var costoKWp = 23000; // MXN/kWp aproximado
+    var inversion = kWp * costoKWp;
+    var ahorroAnual = vBill * vOff * 12;
+    var payback = inversion>0 && ahorroAnual>0 ? (inversion/ahorroAnual) : 0;
+    out.innerHTML = `
+      <strong>Tamaño estimado:</strong> ${format(kWp)} kWp · ${nPanels} paneles de 550 Wp<br>
+      <strong>Inversión aproximada:</strong> ${format(inversion)} MXN<br>
+      <strong>Ahorro anual estimado:</strong> ${format(ahorroAnual)} MXN<br>
+      <strong>Retorno simple:</strong> ${format(payback)} años (aprox.)
+    `;
+  });
+})();
+      </script>
+    </footer>
+  </body>
+</html>
+

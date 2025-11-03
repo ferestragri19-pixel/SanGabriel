@@ -1,0 +1,160 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto | San Gabriel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css" />
+    <link rel="icon" href="images/logo.png" type="image/png">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html#inicio" aria-label="San Gabriel">
+          <img src="images/logo.png" alt="Logo San Gabriel" />
+        </a>
+        <nav class="menu" aria-label="Principal">
+          <a href="index.html#inicio">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="index.html#portafolio">Portafolio</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <a class="btn btn-whatsapp" href="https://wa.me/5218184731555" target="_blank" rel="noopener">Whatsapp</a>
+      </div>
+    </header>
+
+    <section class="contact section-brand" id="contacto">
+      <div class="container">
+        <h2>¡Contáctanos!</h2>
+        <form class="form form--box" name="contacto-stack" method="POST" action="gracias.html" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contacto-stack" />
+  <input type="hidden" name="email" value="" />
+  <p class="hp"><label>No completar: <input name="bot-field" /></label></p>
+
+  <div class="form__row">
+    <div class="f">
+      <input id="nombre" type="text" name="nombre" placeholder="Nombre completo" required />
+    </div>
+    <div class="f">
+      <input id="correo" type="email" name="correo" placeholder="Correo electrónico" required />
+    </div>
+     <div class="f"><label for="correo">Teléfono</label>
+      <input id="telefono" type="number" name="telefono" placeholder="Número telefónico" required />
+    </div>
+  </div>
+
+
+  <!-- /removido -->
+  <div class="form__row">
+    <div class="f"><label for="correo">Correo electrónico</label>
+      <input id="correo_dup" type="email" name="correo" placeholder="Ejemplo@gmail.com" disabled />
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="f"><label for="estado">Municipio</label>
+      <select id="estado" name="estado">
+        <option value="" selected disabled>Selecciona un estado</option>
+        <option>Monterrey</option>
+        <option>Allende</option>
+        <option>Guadalupe</option>
+        <option>Apodaca</option>
+        <option>Escobedo</option>
+        <option>Cadereyta</option>
+        <option>San Nicolás</option>
+        <option>Santiago</option>
+        <option>Montemorelos</option>
+        <option>Otro</option>
+      </select>
+    </div>
+    <div class="f"><label for="sector">Sector</label>
+      <select id="sector" name="sector">
+        <option value="" selected disabled>Selecciona un sector</option>
+        <option>Residencial</option>
+        <option>Comercial</option>
+        <option>Industrial</option>
+      </select>
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="f"><label for="comentario">Mensaje</label>
+      <textarea id="comentario" name="comentario" rows="6" placeholder="Escribe tu mensaje aquí"></textarea>
+    </div>
+  </div>
+  <div class="form__actions">
+    <button class="btn btn-dark" type="submit">Enviar</button>
+  </div>
+</form>
+        <p class="alt-contact">O contáctanos a través de <a class="chip" href="https://wa.me/5218184731555" target="_blank" rel="noopener">Whatsapp</a></p>
+      </div>
+    </section>
+
+    <footer class="footer section-light">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="images/logo.png" alt="Logo San Gabriel" />
+        </div>
+        <div class="footer__links">
+          <h4>Enlaces</h4>
+          <a href="index.html#inicio">Inicio</a>
+          <a href="index.html#nosotros">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="index.html#portafolio">Proyectos</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contacto</h4>
+          <p>Teléfono: +52 818 473 1555</p>
+          <p>Email: materialesasangabriel@gmail.com</p>
+          <p>San Nicolás de los Garza, NL</p>
+        </div>
+      </div>
+      <div class="container copy">
+        <small>© <span id="y"></span> San Gabriel. Todos los derechos reservados.</small>
+      </div>
+      <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+        document.addEventListener('scroll', function(){
+          var tb = document.querySelector('.topbar');
+          if(!tb) return;
+          if(window.scrollY > 4) tb.classList.add('scrolled');
+          else tb.classList.remove('scrolled');
+        });
+              // Validación en vivo
+        (function(){
+          var form = document.forms['contacto-stack'];
+          if(!form) return;
+          // Copy visible email field to hidden 'email' so Netlify sets Reply-To
+          var hiddenEmail = form.querySelector('input[name="email"][type="hidden"]');
+          var visibleEmail = form.querySelector('input[name="correo"], input[type="email"]');
+          function setState(el){
+            var wrap = el.closest('.f') || el.closest('.consent');
+            if(!wrap) return;
+            if(el.checkValidity()){
+              wrap.classList.remove('invalid');
+              el.classList.remove('invalid');
+            }else{
+              wrap.classList.add('invalid');
+              el.classList.add('invalid');
+            }
+          }
+          form.querySelectorAll('input,select,textarea').forEach(function(el){
+            el.addEventListener('input', function(){ setState(el); });
+            el.addEventListener('blur', function(){ setState(el); });
+            el.addEventListener('change', function(){ setState(el); });
+          });
+          form.addEventListener('submit', function(ev){
+            var firstInvalid = null;
+            form.querySelectorAll('input,select,textarea').forEach(function(el){
+              setState(el); if(!el.checkValidity() && !firstInvalid) firstInvalid = el;
+            });
+            if(hiddenEmail && visibleEmail){ hiddenEmail.value = visibleEmail.value; }
+            if(firstInvalid){ ev.preventDefault(); firstInvalid.focus(); }
+          });
+        })();      </script>
+    </footer>
+  </body>
+</html>
