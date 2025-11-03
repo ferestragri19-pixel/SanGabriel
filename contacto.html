@@ -16,17 +16,23 @@
         <a class="brand" href="index.html#inicio" aria-label="San Gabriel">
           <img src="logo.png" alt="Logo San Gabriel" />
         </a>
-        <nav class="menu" aria-label="Principal">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <line class="l1" x1="4" y1="6" x2="20" y2="6" />
+            <line class="l2" x1="4" y1="12" x2="20" y2="12" />
+            <line class="l3" x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+        <nav class="menu" id="nav-menu" aria-label="Principal">
           <a href="index.html#inicio">Inicio</a>
           <a href="nosotros.html">Nosotros</a>
-          <a href="index.html#servicios">Servicios</a>
+          <a href="servicios.html">Servicios</a>
           <a href="index.html#portafolio">Portafolio</a>
           <a href="contacto.html">Contacto</a>
         </nav>
         <a class="btn btn-whatsapp" href="https://wa.me/5218184731555" target="_blank" rel="noopener">Whatsapp</a>
       </div>
     </header>
-
 
     <section class="contact section-brand" id="contacto">
       <div class="container">
@@ -123,6 +129,18 @@
           if(window.scrollY > 4) tb.classList.add('scrolled');
           else tb.classList.remove('scrolled');
         });
+        // Mobile menu toggle
+        (function(){
+          var nav = document.querySelector('.topbar .nav');
+          var btn = document.querySelector('.menu-toggle');
+          if(!nav || !btn) return;
+          btn.addEventListener('click', function(){
+            var open = nav.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+          nav.querySelectorAll('.menu a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }); });
+          window.addEventListener('resize', function(){ if(window.innerWidth > 840){ nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); } });
+        })();
               // Validación en vivo
         (function(){
           var form = document.forms['contacto-stack'];
