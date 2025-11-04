@@ -349,5 +349,7 @@ img{max-width:100%;display:block}
 }
 
 <style> /* Email y mensaje más grandes */ input[type="email"] { width: 100%; } textarea { width: 100%; min-height: 260px; } </style>
+<style> /* Email y mensaje más grandes */ input[type="comentario"] { width: 100%; } textarea { width: 100%; min-height: 260px; } </style>
+
 
 
