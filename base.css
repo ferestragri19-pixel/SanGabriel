@@ -398,23 +398,13 @@ img{max-width:100%;display:block}
   position: relative;
 }
 
-/* Opcional: añadir un filtro oscuro encima de la imagen para mejorar legibilidad */
-.section-brand::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* capa oscura semitransparente */
-  z-index: 0;
-}
 
 /* Asegura que el texto quede encima de la capa */
 .section-brand .container {
   position: relative;
   z-index: 1;
 }
+
 
 
 
