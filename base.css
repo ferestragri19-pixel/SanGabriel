@@ -386,5 +386,17 @@ img{max-width:100%;display:block}
 /* Ensure alt-contact text is readable on black background */
 .contact.section-brand .alt-contact{color:#ffffff}
 
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+.form__actions { margin-top: 8px; }
+@media (max-width: 780px) {
+  .form__row { grid-template-columns: 1fr; }
+}
+
+
 
 
