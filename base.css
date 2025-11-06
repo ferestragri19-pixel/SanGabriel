@@ -384,27 +384,3 @@ img{max-width:100%;display:block}
 }
 
 
-
-
-
-.section-brand {
-  background-image: url('imgnosotros.png'); /* reemplaza con el nombre real del archivo */
-  background-size: cover;       /* hace que la imagen cubra todo el fondo */
-  background-position: center;  /* centra la imagen */
-  background-repeat: no-repeat; /* evita que se repita */
-  color: white;                 /* cambia color del texto si la imagen es oscura */
-  padding: 100px 0;             /* da espacio vertical al texto */
-  text-align: center;
-  position: relative;
-}
-
-
-/* Asegura que el texto quede encima de la capa */
-.section-brand .container {
-  position: relative;
-  z-index: 1;
-}
-
-
-
-
