@@ -34,69 +34,73 @@
       </div>
     </header>
 
-    <section class="contact section-brand" id="contacto">
-      <div class="container">
-        <h2>¡Cotiza tu proyecto!</h2>
-        <form class="form form--box" name="contacto-stack" method="POST" action="gracias.html" netlify netlify-honeypot="bot-field">
+<form class="form form--box" name="contacto-stack" method="POST" action="gracias.html" netlify netlify-honeypot="bot-field">
+  <!-- Para Netlify: reply-to y honeypot -->
   <input type="hidden" name="email" value="" />
   <p class="hp"><label>No completar: <input name="bot-field" /></label></p>
 
+  <!-- Row 1 -->
   <div class="form__row">
-    <div class="f"><div class="f"><label for="correo">Nombre completo</label>
-      <input id="nombre" type="text" name="nombre" placeholder="Nombre completo" required />
+    <div class="f">
+      <label for="nombre">Nombre completo</label>
+      <input id="nombre" type="text" name="nombre" placeholder="Nombre completo" autocomplete="name" required />
     </div>
-    
-     <div class="f"><label for="correo">Teléfono</label>
-      <input id="telefono" type="number" name="telefono" placeholder="Número telefónico" required />
+    <div class="f">
+      <label for="telefono">Teléfono</label>
+      <input id="telefono" type="tel" name="telefono" placeholder="Número telefónico" autocomplete="tel" required />
     </div>
   </div>
 
+  <!-- Row 2 -->
   <div class="form__row">
-    <div class="f"><div class="f"><label for="estado">Estado donde se ubica el proyecto</label>
+    <div class="f">
+      <label for="estado">Estado donde se ubica el proyecto</label>
       <input id="estado" type="text" name="estado" placeholder="Estado" required />
     </div>
-    
-     <div class="f"><label for="Municipio">Municipio donde se ubica el proyecto</label>
-      <input id="Municipio" type="text" name="municipio" placeholder="Municipio" required />
+    <div class="f">
+      <label for="municipio">Municipio donde se ubica el proyecto</label>
+      <input id="municipio" type="text" name="municipio" placeholder="Municipio" required />
     </div>
   </div>
 
-
-  <!-- /removido -->
+  <!-- Row 3 -->
   <div class="form__row">
-    <div class="f"><label for="correo">Correo electrónico</label>
-      <input id="correo" type="email" name="correo" placeholder="Ejemplo@gmail.com" required />
+    <div class="f">
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" type="email" name="correo" placeholder="Ejemplo@gmail.com" autocomplete="email" required />
     </div>
-  </div>
-  
-    <div class="f"><label for="sector">Sector</label>
-      <select id="sector" name="sector">
+    <div class="f">
+      <label for="sector">Sector</label>
+      <select id="sector" name="sector" required>
         <option value="" selected disabled>Selecciona un sector</option>
         <option>Residencial</option>
         <option>Comercial</option>
         <option>Industrial</option>
       </select>
     </div>
-    <div class="f"><label for="proyecto">Tipo de proyecto</label>
-      <select id="proyecto" name="proyecto">
+  </div>
+
+  <!-- Row 4 -->
+  <div class="form__row">
+    <div class="f">
+      <label for="proyecto">Tipo de proyecto</label>
+      <select id="proyecto" name="proyecto" required>
         <option value="" selected disabled>Selecciona el tipo de proyecto</option>
         <option>Urbanización de terreno</option>
         <option>Instalación de panel solar</option>
       </select>
     </div>
-  </div>
-  <div class="form__row">
-    <div class="f"><label for="comentario">Mensaje</label>
+    <div class="f">
+      <label for="comentario">Mensaje</label>
       <textarea id="comentario" name="comentario" rows="6" placeholder="Escribe tu mensaje aquí"></textarea>
     </div>
   </div>
+
   <div class="form__actions">
     <button class="btn btn-dark" type="submit">Enviar</button>
   </div>
 </form>
-        <p class="alt-contact">O contáctanos a través de <a class="chip" href="https://wa.me/5218184731555" target="_blank" rel="noopener">Whatsapp</a></p>
-      </div>
-    </section>
+
 
     <footer class="footer section-light">
       <div class="container footer__grid">
