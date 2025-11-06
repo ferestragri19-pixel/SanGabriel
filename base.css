@@ -383,21 +383,6 @@ img{max-width:100%;display:block}
   background: no-repeat center/contain url('whatsapp.svg');
 }
 
-/* Ensure alt-contact text is readable on black background */
-.contact.section-brand .alt-contact{color:#ffffff}
-
-.hero {
-  height: 40vh; /* reduce la altura a 60% del alto de pantalla */
-  position: relative;
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* asegura que la imagen se recorte sin deformarse */
-}
-
 
 
 
