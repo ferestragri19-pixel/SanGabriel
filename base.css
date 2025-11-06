@@ -382,3 +382,38 @@ img{max-width:100%;display:block}
   width:18px; height:18px; display:inline-block;
   background: no-repeat center/contain url('whatsapp.svg');
 }
+
+
+
+
+
+.section-brand {
+  background-image: url('nombre-de-tu-imagen.jpg'); /* reemplaza con el nombre real del archivo */
+  background-size: cover;       /* hace que la imagen cubra todo el fondo */
+  background-position: center;  /* centra la imagen */
+  background-repeat: no-repeat; /* evita que se repita */
+  color: white;                 /* cambia color del texto si la imagen es oscura */
+  padding: 100px 0;             /* da espacio vertical al texto */
+  text-align: center;
+  position: relative;
+}
+
+/* Opcional: añadir un filtro oscuro encima de la imagen para mejorar legibilidad */
+.section-brand::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* capa oscura semitransparente */
+  z-index: 0;
+}
+
+/* Asegura que el texto quede encima de la capa */
+.section-brand .container {
+  position: relative;
+  z-index: 1;
+}
+
+
