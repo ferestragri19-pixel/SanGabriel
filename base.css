@@ -388,7 +388,7 @@ img{max-width:100%;display:block}
 
 
 .section-brand {
-  background-image: url('nombre-de-tu-imagen.jpg'); /* reemplaza con el nombre real del archivo */
+  background-image: url('imgnosotros.png'); /* reemplaza con el nombre real del archivo */
   background-size: cover;       /* hace que la imagen cubra todo el fondo */
   background-position: center;  /* centra la imagen */
   background-repeat: no-repeat; /* evita que se repita */
@@ -415,5 +415,6 @@ img{max-width:100%;display:block}
   position: relative;
   z-index: 1;
 }
+
 
 
