@@ -387,7 +387,7 @@ img{max-width:100%;display:block}
 .contact.section-brand .alt-contact{color:#ffffff}
 
 .hero {
-  height: 60vh; /* reduce la altura a 60% del alto de pantalla */
+  height: 40vh; /* reduce la altura a 60% del alto de pantalla */
   position: relative;
   overflow: hidden;
 }
@@ -397,6 +397,7 @@ img{max-width:100%;display:block}
   height: 100%;
   object-fit: cover; /* asegura que la imagen se recorte sin deformarse */
 }
+
 
 
 
