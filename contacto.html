@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="base.css" />
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="icon" href="images/logo.png" type="image/png">
   </head>
   <body>
     <header class="topbar">
       <div class="container nav">
         <a class="brand" href="index.html#inicio" aria-label="San Gabriel">
-          <img src="logo.png" alt="Logo San Gabriel" />
+          <img src="images/logo.png" alt="Logo San Gabriel" />
         </a>
         <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -42,22 +42,24 @@
   <p class="hp"><label>No completar: <input name="bot-field" /></label></p>
 
   <div class="form__row">
-    <div class="f"><div class="f"><label for="correo">Nombre completo</label>
+    <div class="f">
+      <label for="nombre">Nombre completo</label>
       <input id="nombre" type="text" name="nombre" placeholder="Nombre completo" required />
     </div>
-    
-     <div class="f"><label for="correo">Teléfono</label>
+    <div class="f">
+      <label for="telefono">Teléfono</label>
       <input id="telefono" type="number" name="telefono" placeholder="Número telefónico" required />
     </div>
   </div>
 
   <div class="form__row">
-    <div class="f"><div class="f"><label for="estado">Estado donde se ubica el proyecto</label>
+    <div class="f">
+      <label for="estado">Estado donde se ubica el proyecto</label>
       <input id="estado" type="text" name="estado" placeholder="Estado" required />
     </div>
-    
-     <div class="f"><label for="Municipio">Municipio donde se ubica el proyecto</label>
-      <input id="Municipio" type="text" name="municipio" placeholder="Municipio" required />
+    <div class="f">
+      <label for="municipio">Municipio donde se ubica el proyecto</label>
+      <input id="municipio" type="text" name="municipio" placeholder="Municipio" required />
     </div>
   </div>
 
@@ -68,8 +70,9 @@
       <input id="correo" type="email" name="correo" placeholder="Ejemplo@gmail.com" required />
     </div>
   </div>
-  
-    <div class="f"><label for="sector">Sector</label>
+  <div class="form__row">
+    <div class="f">
+      <label for="sector">Sector</label>
       <select id="sector" name="sector">
         <option value="" selected disabled>Selecciona un sector</option>
         <option>Residencial</option>
@@ -77,7 +80,8 @@
         <option>Industrial</option>
       </select>
     </div>
-    <div class="f"><label for="proyecto">Tipo de proyecto</label>
+    <div class="f">
+      <label for="proyecto">Tipo de proyecto</label>
       <select id="proyecto" name="proyecto">
         <option value="" selected disabled>Selecciona el tipo de proyecto</option>
         <option>Urbanización de terreno</option>
@@ -101,7 +105,7 @@
     <footer class="footer section-light">
       <div class="container footer__grid">
         <div class="footer__brand">
-          <img src="logo.png" alt="Logo San Gabriel" />
+          <img src="images/logo.png" alt="Logo San Gabriel" />
         </div>
         <div class="footer__links">
           <h4>Enlaces</h4>
