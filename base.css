@@ -424,6 +424,43 @@ img{max-width:100%;display:block}
 .section-cta p{color:#f3f4f6}
 
 
+/* Barra social media */
+.social-fixed{
+  position:fixed;
+  left:12px;
+  top:50vh;
+  transform:translateY(-50%);
+  display:grid;
+  gap:10px;
+  z-index:1000;
+}
+.sf{
+  width:42px; height:42px;
+  border-radius:10px;
+  display:grid; place-items:center;
+  color:#fff; text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  transition:transform .2s ease, filter .2s ease;
+}
+.sf:hover{ transform:translateY(-2px); filter:brightness(1.05) }
+/* Colores por marca */
+.sf--ig{ background:linear-gradient(45deg,#f58529,#feda77,#dd2a7b,#8134af,#515bd4) }
+.sf--fb{ background:#1877f2 }
+.sf--tt{ background:#000 }
+.sf--wa{ background:#25d366 }
+.sf--mail{ background:#ea4335 }
+.sf--msgr{ background:#0084ff }
+
+/* Móvil: compacta y en fila para no tapar contenido */
+@media (max-width: 720px){
+  .social-fixed{
+    left:10px; bottom:16px; top:auto; transform:none;
+    grid-auto-flow:column;
+  }
+  .sf{ width:38px; height:38px; border-radius:12px }
+}
+
+
 
 
 
