@@ -383,4 +383,26 @@ img{max-width:100%;display:block}
   background: no-repeat center/contain url('whatsapp.svg');
 }
 
+/* CTA Compromiso */
+.section-cta{
+  position:relative;
+  background:#111 url('section.png') center/cover no-repeat;
+  padding:48px 0;
+  scroll-margin-top:72px;
+}
+.section-cta::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.55);
+}
+.section-cta > .container{
+  position:relative;
+  z-index:1;
+  text-align:center;
+}
+.section-cta h2{color:#fff}
+.section-cta p{color:#f3f4f6}
+
+
 
