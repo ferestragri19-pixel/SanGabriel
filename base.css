@@ -125,32 +125,25 @@ img{max-width:100%;display:block}
 .footer__links a:hover{color:var(--brand)}
 .copy{padding:12px 0;color:#4b5563}
 
-/* Footer móvil: Contacto debajo de Enlaces (columna 2) */
+/* Footer móvil: logo pequeño y 2 columnas Enlaces | Contacto */
 @media (max-width: 720px){
+  .footer__brand img{width:80px; height:auto}     /* ajusta 70–90px a gusto */
   .footer__grid{
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-    text-align:left;
-    align-items:start;
+    grid-template-columns:1fr 1fr;                /* 2 columnas iguales */
+    gap:14px; align-items:start;
   }
-  .footer__brand{grid-column:1}
-  .footer__links{grid-column:2}
+  /* Logo ocupa su propia fila arriba, sin robar ancho a las columnas */
+  .footer__brand{grid-column:1 / -1; justify-content:center; margin-bottom:6px}
 
-  /* Contacto queda exactamente bajo Enlaces */
-  .footer__contact{
-    grid-column:2;
-    justify-self:start;
-    text-align:left;
-  }
-  .footer__contact h4{margin-top:0}
+  .footer__links{grid-column:1}
+  .footer__contact{grid-column:2; justify-self:start; text-align:left}
 }
 
-/* Muy estrecho: ya apilamos todo */
+/* Muy estrecho: opcional, apilar si no cabe */
 @media (max-width: 420px){
-  .footer__grid{grid-template-columns:1fr; text-align:center}
+  .footer__grid{grid-template-columns:1fr}
   .footer__contact{grid-column:1}
 }
-
 /* Utilities */
 .section-dark h2{color:#fff}
 .cards.section-dark{padding-top:16px}
@@ -429,6 +422,7 @@ img{max-width:100%;display:block}
 }
 .section-cta h2{color:#fff}
 .section-cta p{color:#f3f4f6}
+
 
 
 
