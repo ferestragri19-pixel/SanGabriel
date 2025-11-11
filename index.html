@@ -23,13 +23,6 @@
     <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" aria-hidden="true"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5 8 5 8-5V6H4z"/></svg>
   </a>
 </div>
-
-  <!-- Aceptar cookies -->
-  <div id="cookie-banner" class="cookie-banner">
-  <p>Al navegar por este sitio <strong>aceptas el uso de cookies</strong> para agilizar tu experiencia de compra.</p>
-  <button id="accept-cookies" class="btn">Entendido</button>
-</div>
-
   
   <body>
     <!-- Header / Navbar -->
@@ -344,5 +337,30 @@
         });
         </script>
     </footer>
+    
+  <!-- Aceptar cookies -->
+  <div id="cookie-banner" class="cookie-banner">
+  <p>Al navegar por este sitio <strong>aceptas el uso de cookies</strong> para agilizar tu experiencia de compra.</p>
+  <button id="accept-cookies" class="btn">Entendido</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+
+  if (localStorage.getItem('cookiesAccepted') === 'true') {
+    banner.style.display = 'none';
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    banner.style.display = 'none';
+  });
+});
+</script>
+
+    
+    
   </body>
 </html>
