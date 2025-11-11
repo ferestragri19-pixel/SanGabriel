@@ -498,21 +498,7 @@ img{max-width:100%;display:block}
 .cookie-banner .btn:hover {
   opacity: 0.85;
 }
-<script>
-  const banner = document.getElementById('cookie-banner');
-  const acceptBtn = document.getElementById('accept-cookies');
 
-  // Oculta el banner si ya fue aceptado
-  if (localStorage.getItem('cookiesAccepted') === 'true') {
-    banner.style.display = 'none';
-  }
-
-  // Aceptar cookies
-  acceptBtn.addEventListener('click', () => {
-    localStorage.setItem('cookiesAccepted', 'true');
-    banner.style.display = 'none';
-  });
-</script>
 
 
 
